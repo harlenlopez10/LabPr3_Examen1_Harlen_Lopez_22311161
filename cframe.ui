@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1259</width>
-    <height>836</height>
+    <height>847</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QPushButton" name="pushButton">
@@ -952,8 +952,8 @@ color: rgb(0, 0, 0);</string>
      <widget class="QLineEdit" name="referenceLineEdit3">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>430</y>
+        <x>50</x>
+        <y>590</y>
         <width>121</width>
         <height>61</height>
        </rect>
@@ -969,8 +969,8 @@ color: rgb(0, 0, 0);</string>
      <widget class="QLabel" name="label_15">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>390</y>
+        <x>50</x>
+        <y>550</y>
         <width>441</width>
         <height>31</height>
        </rect>
@@ -987,63 +987,243 @@ color: rgb(0, 0, 0);</string>
        <string>Ingrese su Numero de referencia</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="AddTable">
+     <widget class="QTextEdit" name="textEdit_2">
       <property name="geometry">
        <rect>
-        <x>620</x>
-        <y>310</y>
-        <width>141</width>
-        <height>51</height>
+        <x>880</x>
+        <y>90</y>
+        <width>351</width>
+        <height>191</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Add</string>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700; color:#aa0000;&quot;&gt;Recuerde que.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Ingrese el Numero de Referencia solo para Modificar o Eliminar una Reservacion&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Para Modificar una Reservacion, ingrese los datos nuevos en los campos dados e ingrese el numero de referencia de reservacion y puede darle click al botn y hacer efectiva la modificacion&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Para Eliminar una Reservacion basta con ingresar el NUMERO DE REFERENCIA de dicha reserva&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="RemoveTable">
+    </widget>
+    <widget class="QWidget" name="page_7">
+     <widget class="QPushButton" name="btnRESER">
       <property name="geometry">
        <rect>
-        <x>610</x>
-        <y>380</y>
-        <width>141</width>
-        <height>51</height>
+        <x>510</x>
+        <y>240</y>
+        <width>231</width>
+        <height>101</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Black</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
-       <string>Re</string>
+       <string>Opciones en Reservas</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="btnTABLES">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>360</y>
+        <width>231</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Black</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Opciones de Mesas</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_8">
      <widget class="QPushButton" name="ShowAvailableTables">
       <property name="geometry">
        <rect>
-        <x>610</x>
-        <y>440</y>
+        <x>350</x>
+        <y>480</y>
         <width>141</width>
         <height>51</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Black</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
        <string>Show</string>
       </property>
      </widget>
-     <widget class="QSpinBox" name="NumberTablespinBox">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>560</y>
-        <width>42</width>
-        <height>25</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QSpinBox" name="CapacityspinBox">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>600</y>
-        <width>42</width>
-        <height>25</height>
+        <x>100</x>
+        <y>360</y>
+        <width>71</width>
+        <height>41</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AddTable">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>150</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Black</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Añadir Mesa</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="NumberTablespinBox">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>190</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="RemoveTable">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>260</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Black</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Eliminar Mesa</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>160</y>
+        <width>351</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Black</family>
+        <pointsize>18</pointsize>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>ID DE MESA</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>330</y>
+        <width>351</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Black</family>
+        <pointsize>18</pointsize>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>CAPACIDAD DE MESA</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>190</y>
+        <width>351</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700; color:#aa0000;&quot;&gt;Recuerde que.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Para añadir una mesa debe ingresar un ID y una Capacidad.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Para Eliminar una mesa basta con ingresa solo el ID&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="viewAvailabilityButton4">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>350</y>
+        <width>211</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Black</family>
+        <pointsize>14</pointsize>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(85, 170, 0);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Ver Mesas</string>
       </property>
      </widget>
     </widget>
@@ -1052,7 +1232,26 @@ color: rgb(0, 0, 0);</string>
     <property name="geometry">
      <rect>
       <x>980</x>
-      <y>740</y>
+      <y>760</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Regresar Menu Principal</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRegresar2">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>710</y>
       <width>241</width>
       <height>41</height>
      </rect>

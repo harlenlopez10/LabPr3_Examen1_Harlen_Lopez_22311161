@@ -6,7 +6,7 @@
 
 class Reservation {
 public:
-        // Constructor para inicializar una reserva
+
     Reservation(const QString &name = "", const QString &contact = "", int guests = 0, const QDateTime &dateTime = QDateTime());
 
     QString getName() const;

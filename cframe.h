@@ -55,6 +55,17 @@ private slots:
 
     void on_AddTable_clicked();
 
+
+    void on_btnTABLES_clicked();
+
+    void on_RemoveTable_clicked();
+
+    void on_btnRESER_clicked();
+
+    void on_viewAvailabilityButton4_clicked();
+
+    void on_btnRegresar2_clicked();
+
 private:
     Ui::cframe *ui;
     ReservationManager reservationManager;

@@ -10,6 +10,9 @@ cframe::cframe(QWidget *parent)
     , ui(new Ui::cframe)
 {
     ui->setupUi(this);
+
+    ui->btnRegresar->setVisible(false);
+    ui->btnRegresar2->setVisible(false);
 }
 
 cframe::~cframe()
@@ -26,6 +29,9 @@ void cframe::on_btnRegresar_clicked()
 void cframe::on_pushButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
+
+    ui->btnRegresar2->setVisible(false);
+    ui->btnRegresar->setVisible(true);
 }
 
 
@@ -197,7 +203,10 @@ void cframe::on_cancelReservationButton3_clicked()
 
 void cframe::on_pushButton_2_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(5);
+    ui->stackedWidget->setCurrentIndex(6);
+
+    ui->btnRegresar->setVisible(false);
+    ui->btnRegresar2->setVisible(true);
 }
 
 
@@ -218,5 +227,54 @@ void cframe::on_AddTable_clicked()
     } else {
         QMessageBox::warning(this, "Error", "Ingrese datos correctamente.");
     }
+}
+
+
+void cframe::on_btnTABLES_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(7);
+}
+
+
+void cframe::on_RemoveTable_clicked()
+{
+
+    int id = ui->NumberTablespinBox->value();
+
+    if (id > 0) {
+        reservationManager.removeTable(id);
+        QMessageBox::information(this, "Completado", "Mesa removida exitosamente!");
+    } else {
+        QMessageBox::warning(this, "Error", "Porfavor ingrese un ID de Mesa valido.");
+    }
+}
+
+
+void cframe::on_btnRESER_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+}
+
+
+void cframe::on_viewAvailabilityButton4_clicked()
+{
+    QDateTime datetime = ui->dateTimeEdit3->dateTime();
+    QList<Table> availableTables = reservationManager.getAvailableTables(datetime);
+
+    if (availableTables.isEmpty()) {
+        QMessageBox::information(this, "Disponibilidad", "No hay mesas disponibles para la fecha y hora seleccionadas.");
+    } else {
+        QString message = "Mesas disponibles:\n";
+        foreach (const Table &table, availableTables) {
+            message += QString("Mesa %1 (Capacidad: %2)\n").arg(table.getId()).arg(table.getCapacity());
+        }
+        QMessageBox::information(this, "Disponibilidad", message);
+    }
+}
+
+
+void cframe::on_btnRegresar2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
