@@ -23,6 +23,7 @@ public:
 
     QString getReference() const;
     void setReference(const QString &reference);
+    /**/
 
 private:
     QString name;

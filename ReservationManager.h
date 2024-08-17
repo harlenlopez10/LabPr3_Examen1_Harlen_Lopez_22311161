@@ -19,6 +19,7 @@ public:
     bool removeTable(int tableId);
     QList<Reservation> getAllReservations() const;
 
+    /**/
 private:
     QString generateUniqueReference();
     QList<Reservation> reservations;
