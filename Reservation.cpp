@@ -17,3 +17,4 @@ void Reservation::setDateTime(const QDateTime &dateTime) { this->dateTime = date
 
 QString Reservation::getReference() const { return reference; }
 void Reservation::setReference(const QString &reference) { this->reference = reference; }
+/**/

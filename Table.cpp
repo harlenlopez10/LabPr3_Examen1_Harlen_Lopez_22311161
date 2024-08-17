@@ -24,3 +24,5 @@ void Table::reserve(const QDateTime &datetime) {
 void Table::cancelReservation(const QDateTime &datetime) {
     reservations.removeOne(datetime);
 }
+
+/**/

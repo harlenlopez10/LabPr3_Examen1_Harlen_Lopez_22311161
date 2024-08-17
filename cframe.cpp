@@ -32,7 +32,7 @@ void cframe::on_pushButton_clicked()
 
     ui->btnRegresar2->setVisible(false);
     ui->btnRegresar->setVisible(true);
-}
+    /**/
 
 
 void cframe::on_createReservationButton_clicked()

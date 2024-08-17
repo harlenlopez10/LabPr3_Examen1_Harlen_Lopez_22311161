@@ -29,6 +29,7 @@ QString ReservationManager::addReservation(const Reservation &reservation) {
         }
     }
     return QString();
+    /**/
 }
 
 bool ReservationManager::modifyReservation(const QString &ref, const Reservation &newDetails) {

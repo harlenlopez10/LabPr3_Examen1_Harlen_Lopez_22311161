@@ -66,6 +66,8 @@ private slots:
 
     void on_btnRegresar2_clicked();
 
+    /**/
+
 private:
     Ui::cframe *ui;
     ReservationManager reservationManager;

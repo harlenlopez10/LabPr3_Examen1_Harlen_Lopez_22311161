@@ -15,6 +15,8 @@ public:
     void reserve(const QDateTime &datetime);
     void cancelReservation(const QDateTime &datetime);
 
+    /**/
+
 private:
     int id;
     int capacity;
