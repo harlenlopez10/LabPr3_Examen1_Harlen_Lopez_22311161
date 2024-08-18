@@ -31,15 +31,29 @@ private slots:
 
     void on_cancelReservationButton_clicked();
 
-
-
     void on_btnReservar_clicked();
 
     void on_btnMod_clicked();
 
     void on_btnCancel_clicked();
 
+    void on_btnSalir_clicked();
 
+    /**/
+
+    void on_createReservationButton3_clicked();
+
+    void on_viewAvailabilityButton3_clicked();
+
+    void on_modifyReservationButton3_clicked();
+
+    void on_cancelReservationButton3_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_btnCERRAR_clicked();
+
+    void on_AddTable_clicked();
 
 private:
     Ui::cframe *ui;

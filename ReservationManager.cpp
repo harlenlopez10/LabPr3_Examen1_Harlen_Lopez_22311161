@@ -98,3 +98,23 @@ QList<Table> ReservationManager::getAvailableTables(const QDateTime &datetime) c
     }
     return availableTables;
 }
+
+
+void ReservationManager::addTable(int id, int capacity) {
+    Table newTable(id, capacity);  // Crear una nueva mesa con ID y capacidad
+    tables.append(newTable);
+}
+
+bool ReservationManager::removeTable(int tableId) {
+    for (int i = 0; i < tables.size(); ++i) {
+        if (tables[i].getId() == tableId) {
+            tables.removeAt(i);
+            return true;
+        }
+    }
+    return false;
+}
+
+QList<Reservation> ReservationManager::getAllReservations() const {
+    return reservations;
+}

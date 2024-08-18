@@ -15,6 +15,10 @@ public:
     bool cancelReservation(const QString &ref);
     QList<Table> getAvailableTables(const QDateTime &dateTime) const;
 
+    void addTable(int id, int capacity);  // Nuevo método
+    bool removeTable(int tableId);      // Nuevo método
+    QList<Reservation> getAllReservations() const;  // Nuevo método
+
 private:
     QString generateUniqueReference();
     QList<Reservation> reservations;

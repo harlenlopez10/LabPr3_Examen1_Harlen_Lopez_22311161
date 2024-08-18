@@ -122,3 +122,101 @@ void cframe::on_btnSalir_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
+void cframe::on_createReservationButton3_clicked()
+{
+    QString name = ui->nameLineEdit3->text();
+    QString contact = ui->contactLineEdit3->text();
+    int guests = ui->guestsSpinBox3->value();
+    QDateTime dateTime = ui->dateTimeEdit3->dateTime();
+
+    Reservation reservation(name, contact, guests, dateTime);
+    QString reference = reservationManager.addReservation(reservation);
+
+    if (!reference.isEmpty()) {
+        // Mostrar el número de referencia en un mensaje emergente
+        QMessageBox::information(this, "Reserva Confirmada", "Tu número de referencia es: " + reference);
+    } else {
+        QMessageBox::warning(this, "Error", "No se pudo realizar la reserva. Por favor, intente nuevamente.");
+    }
+
+    ui->nameLineEdit3->clear();
+    ui->contactLineEdit3->clear();
+    ui->referenceLineEdit3->clear();
+}
+
+
+void cframe::on_viewAvailabilityButton3_clicked()
+{
+    QDateTime datetime = ui->dateTimeEdit3->dateTime();
+    QList<Table> availableTables = reservationManager.getAvailableTables(datetime);
+
+    if (availableTables.isEmpty()) {
+        QMessageBox::information(this, "Disponibilidad", "No hay mesas disponibles para la fecha y hora seleccionadas.");
+    } else {
+        QString message = "Mesas disponibles:\n";
+        foreach (const Table &table, availableTables) {
+            message += QString("Mesa %1 (Capacidad: %2)\n").arg(table.getId()).arg(table.getCapacity());
+        }
+        QMessageBox::information(this, "Disponibilidad", message);
+    }
+}
+
+
+void cframe::on_modifyReservationButton3_clicked()
+{
+    QString ref = ui->referenceLineEdit3->text();
+    QString newName = ui->nameLineEdit3->text();
+    QString newContact = ui->contactLineEdit3->text();
+    int newGuests = ui->guestsSpinBox3->value();
+    QDateTime newDatetime = ui->dateTimeEdit3->dateTime();
+
+    Reservation newDetails(newName, newContact, newGuests, newDatetime);
+    if (reservationManager.modifyReservation(ref, newDetails)) {
+        QMessageBox::information(this, "Reserva Modificada", "La reserva ha sido modificada con éxito.");
+    } else {
+        QMessageBox::warning(this, "Error", "No se pudo modificar la reserva. Verifique el número de referencia.");
+    }
+
+    ui->nameLineEdit3->clear();
+    ui->contactLineEdit3->clear();
+    ui->referenceLineEdit3->clear();
+}
+
+
+void cframe::on_cancelReservationButton3_clicked()
+{
+    QString ref = ui->referenceLineEdit2->text();
+
+    if (reservationManager.cancelReservation(ref)) {
+        QMessageBox::information(this, "Reserva Cancelada", "La reserva ha sido cancelada con éxito.");
+    } else {
+        QMessageBox::warning(this, "Error", "No se pudo cancelar la reserva. Verifique el número de referencia.");
+    }
+}
+
+
+void cframe::on_pushButton_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+}
+
+
+void cframe::on_btnCERRAR_clicked()
+{
+    QCoreApplication::quit();
+}
+
+
+void cframe::on_AddTable_clicked()
+{
+    int id = ui->NumberTablespinBox->value();
+    int capacity = ui->CapacityspinBox->value();
+
+    if (id > 0 && capacity > 0) {
+        reservationManager.addTable(id, capacity);  // Llamada correcta con dos argumentos
+        QMessageBox::information(this, "Success", "Table added successfully!");
+    } else {
+        QMessageBox::warning(this, "Error", "Please enter valid ID and Capacity.");
+    }
+}
+
