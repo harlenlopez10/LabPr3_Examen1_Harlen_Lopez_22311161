@@ -10,14 +10,14 @@ class ReservationManager {
 public:
     ReservationManager();
 
-    QString addReservation(const Reservation &reservation);  // Debe ser QString
+    QString addReservation(const Reservation &reservation);
     bool modifyReservation(const QString &ref, const Reservation &newDetails);
     bool cancelReservation(const QString &ref);
     QList<Table> getAvailableTables(const QDateTime &dateTime) const;
 
-    void addTable(int id, int capacity);  // Nuevo método
-    bool removeTable(int tableId);      // Nuevo método
-    QList<Reservation> getAllReservations() const;  // Nuevo método
+    void addTable(int id, int capacity);
+    bool removeTable(int tableId);
+    QList<Reservation> getAllReservations() const;
 
 private:
     QString generateUniqueReference();

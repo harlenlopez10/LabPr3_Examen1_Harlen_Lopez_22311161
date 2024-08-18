@@ -213,10 +213,10 @@ void cframe::on_AddTable_clicked()
     int capacity = ui->CapacityspinBox->value();
 
     if (id > 0 && capacity > 0) {
-        reservationManager.addTable(id, capacity);  // Llamada correcta con dos argumentos
-        QMessageBox::information(this, "Success", "Table added successfully!");
+        reservationManager.addTable(id, capacity);
+        QMessageBox::information(this, "Completado", "Mesa añadida correctamente!");
     } else {
-        QMessageBox::warning(this, "Error", "Please enter valid ID and Capacity.");
+        QMessageBox::warning(this, "Error", "Ingrese datos correctamente.");
     }
 }
 
